@@ -61,6 +61,7 @@ def label_prediction(IN_FASTA, batch_size_value=4):
     PADVALUE=10_000
     # Read fasta as dataframe
     fas_df = fasta_frame(IN_FASTA)
+    fas_df = fas_df.loc[fas_df['sequence'].str.len() <= 800].reset_index(drop=True)
     identifiers = fas_df['id']
     sequences = fas_df['sequence'].str.lower()
     # Tokenize sequences
