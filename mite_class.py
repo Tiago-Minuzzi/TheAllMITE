@@ -61,10 +61,6 @@ def label_prediction(IN_FASTA, batch_size_value=4):
     PADVALUE=10_000
     # Read fasta as dataframe
     fas_df = fasta_frame(IN_FASTA)
-    no_mite = fas_df.loc[fas_df['sequence'].str.len() > 800].reset_index(drop=True)
-    no_mite[['nt','prediction']]=[1,'nt']
-    no_mite.drop(columns='sequence',inplace=True)
-    fas_df = fas_df.loc[fas_df['sequence'].str.len() <= 800].reset_index(drop=True)
     identifiers = fas_df['id']
     sequences = fas_df['sequence'].str.lower()
     # Tokenize sequences
@@ -76,7 +72,6 @@ def label_prediction(IN_FASTA, batch_size_value=4):
     pred_values = modelo.predict(padded_seqs, batch_size = batch_size_value, verbose = 1)
     # Predict labels
     results_df = label_pred_dataframe(identifiers, pred_values)
-    results_df = pd.concat([results_df, no_mite],ignore_index=True).fillna(0)
     return results_df
 
 
