@@ -13,6 +13,7 @@ def cluster_sequences(repeats_fasta: str, clustered_fasta: str) -> TextIO:
                             '-o',clustered_fasta,
                             '-G','0', # use local sequence identity
                             '-aS','0.8', # alignment coverage for the shorter sequence
+                            '-c','0.8', # sequence identity threshold
                             '-M','0', # Memory limit. 0 means no limit.
                             '-T','0']) # Number of threads to use. 0 means all threads.
     
