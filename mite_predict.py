@@ -48,7 +48,7 @@ def label_pred_dataframe(fasta_ids, prediction_results):
     # Labels
     prediction_results = prediction_results[:,1:]
     # Create dataframe
-    colunas = ['stowaway', 'tourist' ]
+    colunas = ['MITE', 'NM' ]
     label_pred_df = pd.DataFrame(prediction_results, columns = colunas)
     label_pred_df = pd.concat([fasta_ids,label_pred_df], axis=1)
     # Create label column
@@ -56,13 +56,13 @@ def label_pred_dataframe(fasta_ids, prediction_results):
     return label_pred_df
 
 def label_prediction(IN_FASTA, batch_size_value=4):
-    modelo = 'model_embedded_MITES_revcomp_20230510-182609/model_embedded_MITES_revcomp_20230510-182609.hdf5'
+    modelo = 'model_embedded_MITES_no-MITE_20230511-111541/model_embedded_MITES_no-MITE_20230511-111541.hdf5'
     label_model = modelo
     PADVALUE=10_000
     # Read fasta as dataframe
     fas_df = fasta_frame(IN_FASTA)
     no_mite = fas_df.loc[fas_df['sequence'].str.len() > 800].reset_index(drop=True)
-    no_mite[['nt','prediction']]=[1,'nt']
+    no_mite[['NM','prediction']]=[1,'NM']
     no_mite.drop(columns='sequence',inplace=True)
     fas_df = fas_df.loc[fas_df['sequence'].str.len() <= 800].reset_index(drop=True)
     identifiers = fas_df['id']
