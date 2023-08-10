@@ -24,11 +24,11 @@ def fasta_frame(fasta_file):
     with open(fasta_file) as fasta:
         # Parse fasta file
         for record in SeqIO.parse(fasta, 'fasta'):
-            fids.append(record.description) # append ids to list
-            fseq.append(str(record.seq).lower()) # append sequences to list
+            fids.append(record.description)  # append ids to list
+            fseq.append(str(record.seq).lower())  # append sequences to list
     # lists to pandas series
-    s1 = pd.Series(fids, name = 'id')
-    s2 = pd.Series(fseq, name = 'sequence')
+    s1 = pd.Series(fids, name='id')
+    s2 = pd.Series(fseq, name='sequence')
     # create dictionary
     data = {'id': s1, 'sequence': s2}
     # create dataframe
@@ -37,12 +37,8 @@ def fasta_frame(fasta_file):
 
 
 def tok_seqs(fseqs):
-    nt_to_token = { 'a':1, 't':2, 'g':3, 'c':4 }
-    sequencias = []
-    for s in fseqs:
-        s = [ nt_to_token[nt] if nt in nt_to_token.keys() else 5 for nt in s ]
-        sequencias.append(s)
-    return sequencias
+    nt_to_token = {'a': 1, 'c': 2, 'g': 3, 't': 4}
+    return [nt_to_token.get(base, 5) for base in fseqs]
 
 def label_pred_dataframe(fasta_ids, prediction_results):
     # Labels
