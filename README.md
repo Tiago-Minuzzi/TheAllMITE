@@ -3,7 +3,9 @@
 The All MITE is a MITE classifier tool using artificial neural networks.
 It's on **alpha** stage.
 
-You can run on your transposable element sequences to evaluate if there's MITEs among them.
+You can run on your transposable element sequences to evaluate if there are MITEs among them.
+
+At first, it filter sequences by length, then, the remaining sequences are classified as either being MITE or not MITE; finally, sequences classified as MITEs by the first model are classified as either Stowaway or Tourist.
 
 ## What are MITEs?
 
@@ -12,7 +14,7 @@ MITEs are characterized by their small size, typically ranging from around 100 t
 
 ## Installation
 
-We recommend using a virtual enviroment.
+It's to recommended to install it in a virtual environment.
 
 `Python >= 3.8` and `pip` are required to install the dependencies. To install run:
 
@@ -37,7 +39,7 @@ The output is a TSV file containing the prediction results as below:
 | MERMITE18A MuDR    Oryza sativa   |526 | MITE | Tourist |
 | AgaP8MITE2450  P   Anopheles gambiae | 2456 | NM | NM |
 
-
+NM: not MITE.
 
 ## To do
 
