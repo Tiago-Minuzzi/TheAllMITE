@@ -49,7 +49,8 @@ sequence_arrays = np.delete(sequence_arrays, drop_not_mite, axis=0)
 
 results_2 = np.argmax(MODEL_2.predict(sequence_arrays), axis=1)
 mites['prediction_2'] = results_2
-mites['prediction_2'] = mites['prediction_2'].map({0: 'Stowaway',1: 'Tourist'})
-mites = mites.loc[:,['id', 'len', 'prediction_1', 'prediction_2']]
+mites['prediction_2'] = mites['prediction_2'].map({0: 'Stowaway', 1: 'Tourist'})
+mites = mites.loc[:, ['id', 'len', 'prediction_1', 'prediction_2']]
 final_results = pd.concat([mites, not_mite]).fillna('NM')
-final_results.to_csv('results_TheAllMITE.tsv', sep='\t',index=False)
+final_results.to_csv('results_TheAllMITE.tsv', sep='\t', index=False)
+
