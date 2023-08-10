@@ -14,7 +14,7 @@ MITEs are characterized by their small size, typically ranging from around 100 t
 
 ## Installation
 
-It's to recommended to install it in a virtual environment.
+It's recommended to install it in a virtual environment.
 
 `Python >= 3.8` and `pip` are required to install the dependencies. To install run:
 
