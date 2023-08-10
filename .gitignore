@@ -1,7 +1,6 @@
 __pycache__/
 *.tsv
 *.csv
-*.txt
 *.fasta
 *.clstr
 model_embedded_*/

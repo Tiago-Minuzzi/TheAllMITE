@@ -5,7 +5,7 @@ from Bio.SeqIO.FastaIO import SimpleFastaParser
 
 
 def fasta_reader(ffasta: TextIO) -> list[tuple]:
-    record = namedtuple('record', 'fid seq len')
+    record = namedtuple('record', 'id seq len')
     records = []
     with open(ffasta) as fa:
         for fid, fsq in SimpleFastaParser(fa):
@@ -19,7 +19,7 @@ def tokenize(sequence: str) -> list:
     return [nt_dict.get(n, 5) for n in sequence]
 
 
-def zero_padder(self, arr: list, pad_len: int = 800) -> np.ndarray:
+def zero_padder(arr: list, pad_len: int = 1_000) -> np.ndarray:
     """Appends zeros to inner arrays of list of arrays to make all arrays the same length."""
 
     return np.array([np.hstack([a[:pad_len], np.zeros(pad_len - len(a[:pad_len]))]) for a in arr])
