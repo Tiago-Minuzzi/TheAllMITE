@@ -3,7 +3,7 @@
 The All MITE is a MITE classifier tool using artificial neural networks.
 It's on **alpha** stage.
 
-You can run on your transposable element sequences to evaluate if thera MITEs among them.
+You can run on your transposable element sequences to evaluate if there's MITEs among them.
 
 ## What are MITEs?
 
