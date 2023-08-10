@@ -43,7 +43,7 @@ The output is a TSV file containing the prediction results as below:
 
 - [ ] Accuracy score in the output table.
 - [ ] Output FASTA file for MITE sequences.
-- [ ] Add comman-line options.
+- [ ] Add command-line options.
 - [ ] Add repeat extraction tool to use in genomes.
 - [ ] Add a conda recipe.
 
