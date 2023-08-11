@@ -43,7 +43,7 @@ NM: not MITE.
 
 ## To do
 
-- [ x ] Accuracy score in the output table.
+- [x] Accuracy score in the output table.
 - [ ] Output FASTA file for MITE sequences.
 - [ ] Add command-line options.
 - [ ] Add repeat extraction tool to use in genomes.
