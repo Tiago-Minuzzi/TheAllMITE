@@ -1,16 +1,16 @@
 # The All MITE
 
-The All MITE is a MITE classifier tool using artificial neural networks.
-It's on **alpha** stage.
+<p style="text-align:justify;">The All MITE is a MITE classifier tool using artificial neural networks.
+It's on **alpha** stage.</p>
 
-You can run on your transposable element sequences to evaluate if there are MITEs among them.
+<p style="text-align:justify;">You can run on your transposable element sequences to evaluate if there are MITEs among them.</p>
 
-At first, it filter sequences by length, then, the remaining sequences are classified as either being MITE or not MITE; finally, sequences classified as MITEs by the first model are classified as either Stowaway or Tourist.
+<p style="text-align:justify;">At first, it filter sequences by length, then, the remaining sequences are classified as either being MITE or not MITE; finally, sequences classified as MITEs by the first model are classified as either Stowaway or Tourist.</p>
 
 ## What are MITEs?
 
-MITEs, or Miniature Inverted-repeat Transposable Elements, are a type of transposable element found in the genomes of various organisms, including plants and some animals. Transposable elements (TEs) are DNA sequences that have the ability to move, or transpose, within a genome. They can have significant impacts on the structure and function of genomes, as well as contribute to genetic diversity and evolution.
-MITEs are characterized by their small size, typically ranging from around 100 to 800 base pairs in length, and are non-autonomous transposable elements, which means they lack the coding sequences necessary for their own transposition. Instead, they rely on the machinery of other transposable elements, known as autonomous elements, to facilitate their movement. These autonomous elements provide the necessary enzymes and proteins for transposition, allowing MITEs to hitch a ride and be copied and inserted into new genomic locations.
+<p style="text-align:justify;">MITEs, or Miniature Inverted-repeat Transposable Elements, are a type of transposable element found in the genomes of various organisms, including plants and some animals. Transposable elements (TEs) are DNA sequences that have the ability to move, or transpose, within a genome. They can have significant impacts on the structure and function of genomes, as well as contribute to genetic diversity and evolution.</p>
+<p style="text-align:justify;">MITEs are characterized by their small size, typically ranging from around 100 to 800 base pairs in length, and are non-autonomous transposable elements, which means they lack the coding sequences necessary for their own transposition. Instead, they rely on the machinery of other transposable elements, known as autonomous elements, to facilitate their movement. These autonomous elements provide the necessary enzymes and proteins for transposition, allowing MITEs to hitch a ride and be copied and inserted into new genomic locations.</p>
 
 ## Installation
 
