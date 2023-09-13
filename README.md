@@ -32,7 +32,7 @@ Example:
 
 The output is a TSV file containing the prediction results as below:
 | id | len | prediction_1 | accuracy_1 | prediction_2 | accuracy_2 |
-| --- | --- | ---------- | ------------ | ----------- | ---------- |
+| :--- | :---: | :----------: | :------------: | :-----------: | :----------: |
 | MITE_MS    miniature inverted repeat   Medicago sativa | 184 | MITE | 1.0 | Tourist | 1.0 |
 | MITE_AA    MITE    Aedes aegypti | 521 | MITE | 1.0 | Stowaway | 0.7799 |
 | ORGANDY_BM MITE    Bombyx mori | 548 | MITE | 0.9042 | Tourist | 0.9999 |
